@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us – NIMAS</title>
+    
+    <style type="text/css">
+        :root {
+            --primary-color: #0f2b5c;
+            --secondary-color: #1b8a5a;
+            --text-color: #333333;
+            --bg-dark: #1a1a1a;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .site-wrapper {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #header-placeholder {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            position: relative;
+            z-index: 99999;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Page Header Banner */
+        .page-banner {
+            background: linear-gradient(135deg, rgba(15, 43, 92, 0.85) 0%, rgba(26, 68, 136, 0.85) 100%), url('https://i.postimg.cc/FsX6vKn5/nimaslogo.png') center/cover no-repeat;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .page-banner h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .page-banner p {
+            font-size: 18px;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        /* Contact Info Dark Section */
+        .contact-info-section {
+            background-color: #161616;
+            color: var(--white);
+            padding: 70px 0;
+        }
+
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info-box {
+            padding: 20px;
+        }
+
+        .contact-info-box .icon {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .contact-info-box h3 {
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .contact-info-box p {
+            color: #b0b0b0;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .contact-info-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-info-box ul li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .contact-info-box ul li a, 
+        .contact-info-box a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info-box ul li a:hover,
+        .contact-info-box a:hover {
+            color: #23b374;
+            text-decoration: underline;
+        }
+
+        /* Leave Us Your Info Section */
+        .leave-info-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        /* Form Card Styling */
+        .form-card {
+            background: var(--white);
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 6px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 15px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s ease;
+            background-color: #fdfdfd;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            background-color: var(--white);
+        }
+
+        /* Simulated Captcha Box */
+        .captcha-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            background: #f9f9f9;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        .captcha-box {
+            background: #e9ecef;
+            border: 1px solid #ced4da;
+            padding: 10px 15px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: monospace;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .captcha-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #4c1d95; /* Deep purple matching sample */
+            color: var(--white);
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #3b1578;
+        }
+
+        .submit-btn:active {
+            transform: scale(0.99);
+        }
+
+        #footer-placeholder {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .page-banner h1 {
+                font-size: 32px;
+            }
+            .form-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="site-wrapper">
+        <!-- HEADER COMPONENT PLACEHOLDER -->
+        <header id="header-placeholder"></header>
+
+        <main>
+            <!-- PAGE BANNER -->
+            <section class="page-banner">
+                <div class="container">
+                    <h1>Contact Us</h1>
+                    <p>Get Intouch</p>
+                </div>
+            </section>
+
+            <!-- CONTACT INFO DARK SECTION -->
+            <section class="contact-info-section">
+                <div class="container">
+                    <div class="contact-info-grid">
+                        
+                        <!-- Phone Box -->
+                        <div class="contact-info-box">
+                            <div class="icon">📞</div>
+                            <h3>Phone</h3>
+                            <p>We are just a call away.</p>
+                            <ul>
+                                <li><a href="tel:+9109874669007">+91-098746 69007</a></li>
+                                <li><a href="tel:+9109874641007">+91-09874641007</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Email Box -->
+                        <div class="contact-info-box">
+                            <div class="icon">✉️</div>
+                            <h3>Email</h3>
+                            <p>Mail us your query, we would call you back.</p>
+                            <ul>
+                                <li><a href="mailto:nimas.admission@gmail.com">nimas.admission@gmail.com</a></li>
+                                <li><a href="mailto:info@nimas.in">info@nimas.in</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Location Box -->
+                        <div class="contact-info-box">
+                            <div class="icon">📍</div>
+                            <h3>Location</h3>
+                            <p>HL NO- 1045/1/A, Barasat Barrackpore Road, Ward No. 4, Kolkata- 700125<br>(Behind Lokenath Mandir)</p>
+                            <a href="https://maps.google.com" target="_blank" rel="noopener">View On Google Map</a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- LEAVE US YOUR INFO SECTION -->
+            <section class="leave-info-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>LEAVE US YOUR INFO</h2>
+                        <p>AND WE WILL GET BACK TO YOU.</p>
+                    </div>
+
+                    <div class="form-card">
+                        <form action="#" method="POST">
+                            
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="course">Course</label>
+                                <select id="course" name="course" class="form-control">
+                                    <option value="B. Optometry">B. Optometry</option>
+                                    <option value="B.Sc. in Cyber Security">B.Sc. in Cyber Security</option>
+                                    <option value="B.Sc Computer Science">B.Sc Computer Science</option>
+                                    <option value="B.Sc in Data Science">B.Sc in Data Science</option>
+                                    <option value="M.Sc. in Clinical Psychology">M.Sc. in Clinical Psychology</option>
+                                    <option value="M.Sc. Dietetics & Nutrition">M.Sc. Dietetics &amp; Nutrition</option>
+                                    <option value="BHHA">B.Sc. in Hospitality &amp; Hotel Administration (BHHA)</option>
+                                    <option value="BBA Hospital Management">Bachelor in Business Administration (Hospital Management)</option>
+                                    <option value="BCA">Bachelor in Computer Applications (BCA)</option>
+                                    <option value="B.Sc. in Medical Lab Technology">B.Sc. in Medical Lab Technology</option>
+                                    <option value="B.Sc in Critical Care Tech">B.Sc. in Medical Instrumentation &amp; Critical Care Technology</option>
+                                    <option value="BBA">Bachelor in Business Administration (BBA)</option>
+                                </select>
+                            </div>
+
+                            <!-- Simulated Captcha -->
+                            <div class="captcha-container">
+                                <div class="captcha-box">
+                                    <span>Loading...</span>
+                                    <span style="cursor: pointer;" title="Reload Captcha">&#x21bb;</span>
+                                </div>
+                                <input type="text" placeholder="" class="captcha-input" required>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit</button>
+
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER COMPONENT PLACEHOLDER -->
+        <footer id="footer-placeholder"></footer>
+    </div>
+
+    <!-- JS SCRIPTS FOR REUSABLE COMPONENTS -->
+    <script type="text/javascript">
+        function loadComponent(elementId, fileUrl) {
+            fetch(fileUrl)
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = data;
+                    
+                    // Re-evaluates and executes scripts inside header.html so mobile menus function properly
+                    const scripts = container.querySelectorAll("script");
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement("script");
+                        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                })
+                .catch(error => console.error('Error loading component:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('header-placeholder', 'header.html');
+            loadComponent('footer-placeholder', 'footer.html');
+        });
+    </script>
+</body>
+</html>

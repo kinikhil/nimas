@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form - FormSubmit</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contact-container {
+            width: 100%;
+            max-width: 500px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-container h2 {
+            font-size: 28px;
+            color: #0f172a;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background-color: #f8f9fa;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 15px;
+            color: #333333;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #22c55e;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-submit-btn {
+            display: inline-block;
+            background-color: #22c55e;
+            color: #ffffff;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        .contact-submit-btn:hover {
+            background-color: #16a34a;
+            transform: translateY(-1px);
+        }
+
+        .form-status {
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h2>Get in Touch</h2>
+        <!-- 
+          Replace 'your-email@example.com' with your actual fixed recipient email address.
+          FormSubmit will automatically send form submissions directly to that address.
+        -->
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/nikk_in@yahoo.com" method="POST">
+            
+            <!-- Hidden configuration fields for FormSubmit -->
+            <!-- Disable captcha (optional, remove if you want captcha protection) -->
+            <input type="hidden" name="_captcha" value="true">
+            <!-- Custom subject line for the incoming email -->
+            <input type="hidden" name="_subject" value="New Query from Website Contact Form">
+            <!-- Optional: Redirect to a thank you page after submission -->
+            <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html"> -->
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="tel" id="number" name="number" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="query">Query</label>
+                <textarea id="query" name="query" placeholder="Type your query or message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit-btn" id="submitBtn">Send Message</button>
+            <div class="form-status" id="formStatus"></div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("contactForm");
+            const submitBtn = document.getElementById("submitBtn");
+            const formStatus = document.getElementById("formStatus");
+
+            form.addEventListener("submit", function(event) {
+                // Optional UI enhancement during native post submission
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Sending...";
+                formStatus.textContent = "Submitting your query...";
+                formStatus.style.color = "#0f172a";
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Infrastructure – NIMAS</title>
+    
+    <style type="text/css">
+        :root {
+            --primary-color: #0f2b5c;
+            --secondary-color: #1b8a5a;
+            --text-color: #333333;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .site-wrapper { width: 100%; margin: 0 auto; }
+
+        #header-placeholder { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; position: relative; z-index: 99999; }
+
+        .main-container { max-width: 1200px; margin: 30px auto 40px auto; padding: 0 20px; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Page Header Banner */
+        .page-banner {
+            background: linear-gradient(135deg, #0f2b5c 0%, #1a4488 100%);
+            color: var(--white);
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .page-banner h1 {
+            font-size: 38px;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        /* Infrastructure Layout Container */
+        .infra-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Vertical Strip Image Styles */
+        .infra-sidebar-img {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 20px;
+        }
+
+        .infra-sidebar-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        /* Main Infrastructure Content Cards */
+        .infra-main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .infra-card {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 35px;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .infra-card h2 {
+            font-size: 22px;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .infra-card p {
+            color: #444;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .infra-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .infra-card ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #444;
+        }
+
+        .infra-card ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Bottom Apply Now Section */
+        .bottom-apply-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .apply-btn-bottom {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 16px 40px;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .apply-btn-bottom:hover {
+            background-color: #146c43;
+            transform: translateY(-2px);
+        }
+
+        #footer-placeholder { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; }
+
+        @media (max-width: 992px) {
+            .infra-layout {
+                grid-template-columns: 1fr;
+            }
+            .infra-sidebar-img {
+                position: static;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-banner h1 {
+                font-size: 28px;
+            }
+            .infra-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <header id="header-placeholder"></header>
+        
+        <main class="main-container">
+            <!-- PAGE BANNER -->
+            <section class="page-banner">
+                <h1>Infrastructure</h1>
+            </section>
+
+            <!-- MAIN INFRASTRUCTURE SECTION -->
+            <div class="infra-layout">
+                <!-- Vertical Strip Image Sidebar -->
+                <div class="infra-sidebar-img">
+                    <img src="nimas-infra.png" alt="NIMAS Infrastructure">
+                </div>
+
+                <!-- Extracted Content Stack -->
+                <div class="infra-main-content">
+                    
+                    <!-- Campus Overview -->
+                    <div class="infra-card">
+                        <h2>Campus Overview &amp; Location</h2>
+                        <p>The MAKAUT affiliated NIMAS Campus is situated at the outskirts of Kolkata[cite: 1]. Spread over a lush green campus, the campus proposes dedicated hostel facilities for students, dedicated hospitality, information technology &amp; management education wings, sports and recreational facilities along with conferencing and commercial facilities[cite: 1]. Built to integrate 'innovation' and 'career' within a single environment, the campus has ultra-modern amenities for all students[cite: 1].</p>
+                        <p>The Campus landscape is and has always been central to the identity of NIMAS Barasat and to the experience of its students[cite: 1]. The Campus has a marked individual character not found in too many Institutes in West Bengal[cite: 1]. Students have the freedom of studying in a midst of intricate beauty and greenery spread over 0.5 acres and surrounded by picturesque landscape[cite: 1].</p>
+                        <p>Situated in the Barrackpore Barasat Road (Behind Lokenath Mandir) it is well connected by Bus or Train[cite: 1]. Kolkata to Barasat - 1 hr 15 min / 23 km[cite: 1].</p>
+                        <p><strong>Bus Route No.:</strong> L238, 81, DN5, Barasat Garia, 78C/1, Barasat - Barrackpore court, DN2, DN44, DN9, DN17, DN47, DN18, Shyambazar - Basirhat Via Barasat, S11, Barasat - Kamalpur, Barasat - Dhulagarh, Barasat - Mecheda[cite: 1].</p>
+                    </div>
+
+                    <!-- Front Office Lab -->
+                    <div class="infra-card">
+                        <h2>Front Office</h2>
+                        <p>Front Office studies cannot be completed without extensive lab sessions[cite: 1]. Our Front Office Lab is well equipped with all modern accessories ranging from front desk, telephone, hands-free reservations, Whitney rack, bell desk, computer terminals with IDS Fortune Enterprise version, aiming to create tomorrow's leaders[cite: 1].</p>
+                    </div>
+
+                    <!-- Housekeeping Lab -->
+                    <div class="infra-card">
+                        <h2>Housekeeping Lab</h2>
+                        <p>The housekeeping lab is equipped with the most modern equipments like the Wet &amp; Dry Vacuum Cleaner, Washing Machine, Steam Press, Maid's Trolley, and Linen Basket Trolley etc[cite: 1]. The department has one Model Guest rooms i.e. Suite room, Double room, Twin room where the students can do the practical training[cite: 1]. The Department also consists of a Laundry-Linen room and Housekeeping Lab[cite: 1].</p>
+                    </div>
+
+                    <!-- Food Production Lab -->
+                    <div class="infra-card">
+                        <h2>Food Production Lab</h2>
+                        <p>NIMAS has 3 massive Food Production Labs or Kitchens[cite: 1]. All Kitchens are designed in such a way that each student of a class can do individual practical[cite: 1]. We have a Basic Training Kitchen, a Quantity Training Kitchen, an Advanced training Kitchen, a Patisserie and Confectionary Lab and a Larder Kitchen[cite: 1]. We also have a show kitchen which is used for demonstration[cite: 1]. All kinds of basic tools &amp; equipments are there to demonstrate to the students[cite: 1]. It is fitted with Audio Visual aids[cite: 1].</p>
+                    </div>
+
+                    <!-- Well Equipped Training Labs -->
+                    <div class="infra-card">
+                        <h2>Well Equipped Training Labs</h2>
+                        <p>NIMAS has its own F &amp; B lab with 1 basic Training Restaurant, 1 Bakery Lab, 1 advanced Training Restaurant with bar, Cafeteria/Fast Food Restaurant with 100 seating capacity, Optometry Lab, Biochemistry Lab[cite: 1]. Our F &amp; B Service lab is equipped with all the amenities which assist the students during their practical classes[cite: 1].</p>
+                    </div>
+
+                    <!-- Computer Lab -->
+                    <div class="infra-card">
+                        <h2>Computer Lab</h2>
+                        <p>We have 2 large computer labs with 30 terminals with internet facilities and necessary software[cite: 1].</p>
+                    </div>
+
+                    <!-- Language Lab -->
+                    <div class="infra-card">
+                        <h2>Language Lab</h2>
+                        <p>Language &amp; communication is a very important component of learning in the hospitality sector[cite: 1]. NIMAS is equipped with state-of-the-art language lab[cite: 1]. Student are trained with the help of appropriate software to cope with aptitude tests, group discussions and personality development with strong focus on phonetics, accent and listening, speaking and presentation[cite: 1].</p>
+                    </div>
+
+                    <!-- Cafeteria -->
+                    <div class="infra-card">
+                        <h2>Cafeteria</h2>
+                        <p>NIMAS canteen is the place where students indulge in gossip and creating valuable memories of college life[cite: 1]. It is also famous for its wide variety of food, both regular and fancy, available at affordable rates[cite: 1]. It provides healthy, nutritious meals at affordable rates to students[cite: 1].</p>
+                    </div>
+
+                    <!-- Sports Facilities -->
+                    <div class="infra-card">
+                        <h2>Sports Facilities</h2>
+                        <p>There is a huge playground for various sport activities like cricket, football and badminton[cite: 1]. The college also provides indoor sports arrangement[cite: 1]. Moreover, an Annual Sports Day &amp; frequent tournament are observed every year to give an opportunity for students to exhibit their athletic talents in front of friends and family[cite: 1].</p>
+                    </div>
+
+                    <!-- Eco Friendly WiFi Campus -->
+                    <div class="infra-card">
+                        <h2>Eco Friendly WiFi Campus</h2>
+                        <p>A lush green fully Wi-Fi enabled campus is one of these facilities[cite: 1]. Spread over acres of land, NIMAS houses provides free, speedy internet both in the institution as well as the hostels for its students[cite: 1].</p>
+                    </div>
+
+                    <!-- Library -->
+                    <div class="infra-card">
+                        <h2>Library</h2>
+                        <p>The library is one of the highlights of the College[cite: 1]. At present there are books of eminent authors and journals &amp; magazines are readily available to the students, who are also encouraged to read the daily newspaper to keep them updated in current affairs[cite: 1].</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- APPLY NOW BUTTON -->
+            <div class="bottom-apply-section">
+                <a href="admission-form.html" class="apply-btn-bottom">APPLY NOW</a>
+            </div>
+        </main>
+
+        <footer id="footer-placeholder"></footer>
+    </div>
+
+    <script type="text/javascript">
+        function loadComponent(elementId, fileUrl) {
+            fetch(fileUrl)
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = data;
+                    const scripts = container.querySelectorAll("script");
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement("script");
+                        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                })
+                .catch(error => console.error('Error loading component:', error));
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('header-placeholder', 'header.html');
+            loadComponent('footer-placeholder', 'footer.html');
+        });
+    </script>
+</body>
+</html>

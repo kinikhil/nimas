@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bachelor in Computer Applications (BCA) – NIMAS</title>
+    <style type="text/css">
+        :root {
+            --primary-color: #0e1e3f;
+            --secondary-color: #1c1c1c;
+            --accent-color: #0056b3;
+            --text-color: #333333;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --tab-inactive-bg: linear-gradient(180deg, #4c4c4c 0%, #1e1e1e 50%, #000000 100%);
+            --tab-active-bg: linear-gradient(180deg, #4d6494 0%, #223c72 40%, #182b52 100%);
+            --panel-bg: #182b52;
+            --accent-red: #e74c3c;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; color: var(--text-color); line-height: 1.6; background-color: var(--bg-light); }
+        a { color: inherit; text-decoration: none; }
+        .site-wrapper { width: 100%; margin: 0 auto; }
+        #header-placeholder { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; position: relative; z-index: 99999; }
+        .main-container { max-width: 1200px; margin: 30px auto 40px auto; padding: 0 20px; }
+        .page-banner { background-color: var(--primary-color); color: var(--white); text-align: center; padding: 50px 20px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .page-banner h1 { font-size: 38px; font-weight: 700; }
+        .content-card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .content-card h2 { color: var(--primary-color); margin-bottom: 15px; font-size: 26px; }
+        .tabs-container { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 30px; }
+        .tabs-header { display: flex; background-color: #000; }
+        .tab-btn { flex: 1; padding: 22px 15px; background: var(--tab-inactive-bg); border: none; outline: none; font-size: 16px; font-weight: 700; color: var(--white); cursor: pointer; text-align: center; border-right: 1px solid rgba(255,255,255,0.05); }
+        .tab-btn.active { background: var(--tab-active-bg); }
+        .tab-content-wrapper { background-color: var(--panel-bg); color: var(--white); padding: 40px 30px; min-height: 200px; }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        .tab-panel::before { content: ""; display: block; width: 30px; height: 3px; background-color: var(--accent-red); margin-bottom: 20px; }
+        .tab-panel h3 { color: var(--white); font-size: 20px; margin-bottom: 15px; }
+        .tab-panel ul { margin-left: 20px; margin-top: 10px; margin-bottom: 15px; }
+        .tab-panel li { margin-bottom: 8px; font-size: 15px; }
+        .btn-container { text-align: center; margin: 30px 0; }
+        .btn-apply { display: inline-block; background-color: var(--primary-color); color: var(--white); padding: 15px 40px; font-weight: bold; border-radius: 4px; }
+        #footer-placeholder { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; }
+        @media (max-width: 768px) {
+            .page-banner h1 { font-size: 28px; }
+            .tabs-header { flex-direction: column; }
+            .tab-btn { text-align: left; padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <header id="header-placeholder"></header>
+        <main class="main-container">
+            <section class="page-banner">
+                <h1>Bachelor in Computer Applications (BCA)</h1>
+            </section>
+            
+            <div class="content-card">
+                <h2>Course Description</h2>
+                <p>It is committed to impart quality education in the fields of IT. The curriculum is tailored to provide a good theoretical foundation through high quality teaching complemented by extensive practical training. BCA course provides a sound academic base from which an advanced career in Computer Application can be developed. These graduates can start their career as Junior Programmer and get promoted to the post of senior Programmer & Project Managers in the IT sector.</p>
+            </div>
+
+            <div class="tabs-container">
+                <div class="tabs-header">
+                    <button class="tab-btn active" onclick="openTab(event, 'tab-overview')">Program Overview</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-eligibility')">Eligibility Criteria</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-curriculum')">Curriculum</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-duration')">Duration</button>
+                </div>
+
+                <div class="tab-content-wrapper">
+                    <div id="tab-overview" class="tab-panel active">
+                        <h3>Program Overview</h3>
+                        <p>Exposure to new information technologies and communication systems will make each student an expert. It exposes the students to industry relevant subjects like DBMS, Multimedia, Data Structure, Languages like C++, JAVA, VC++, VB, Networking, Software Programming etc. It trains undergraduates for development of computer software in diverse range of application areas. Provides the students with a sound background in Computing, Business Functions and Mathematics.</p>
+                    </div>
+
+                    <div id="tab-eligibility" class="tab-panel">
+                        <h3>Eligibility Criteria</h3>
+                        <p>Passed or appeared in Higher Secondary or equivalent examination (CBSE, ISC, A Levels or any other equivalent Board examination) with English as a compulsory subject are preferred. Students who are due to appear for Class XII final exams/awaiting results may be given provisional admission depending on their CET score. Admissions are strictly on merit basis.</p>
+                    </div>
+
+                    <div id="tab-curriculum" class="tab-panel">
+                        <h3>Curriculum (Course Modules)</h3>
+                        <p>FIRST YEAR: Digital Electronics, Business Systems and Applications, Introduction to Programming Mathematics, Computer Architecture and Systems Software, Information Systems Analysis & Design, Computer Programming (VISUAL BASIC) PC Software.</p>
+                        <p>SECOND YEAR: Operating Systems, Data Base Management System, Data Structures with C, Object Oriented Programming with C++, Graphics & Internet Software, Project Management and Quality Assurance, Mathematics for Computing Statistics, Numerical Methods & Algorithms.</p>
+                        <p>THIRD YEAR: Data Communication & Computer Networks, Advanced networking and Communication, Intelligent Systems, Image Processing, Advanced Unix and Shell Programming, Human Computer Interaction, Multimedia & E-Commerce Software Engineering, Object Oriented Programming with Java, Advanced Database Management, Windows Programming, Major Project Unix & shell Programming Seminar, Minor Project.</p>
+                    </div>
+
+                    <div id="tab-duration" class="tab-panel">
+                        <h3>Duration</h3>
+                        <p>3 Years- Full Time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <a href="#" class="btn-apply">APPLY NOW</a>
+            </div>
+        </main>
+        <footer id="footer-placeholder"></footer>
+    </div>
+
+    <script type="text/javascript">
+        function openTab(evt, tabName) {
+            var i, tabpanel, tablinks;
+            tabpanel = document.getElementsByClassName("tab-panel");
+            for (i = 0; i < tabpanel.length; i++) { tabpanel[i].classList.remove("active"); }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) { tablinks[i].classList.remove("active"); }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+        function loadComponent(elementId, fileUrl) {
+            fetch(fileUrl)
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = data;
+                    const scripts = container.querySelectorAll("script");
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement("script");
+                        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                })
+                .catch(error => console.error('Error loading component:', error));
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('header-placeholder', 'header.html');
+            loadComponent('footer-placeholder', 'footer.html');
+        });
+    </script>
+</body>
+</html>

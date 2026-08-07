@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admission Form – NIMAS</title>
+    
+    <style type="text/css">
+        :root {
+            --primary-color: #0f2b5c;
+            --secondary-color: #1b8a5a;
+            --text-color: #333333;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
+            --form-red-bg: #e53935;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .site-wrapper {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #header-placeholder {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            position: relative;
+            z-index: 99999;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Admission Form Main Section */
+        .admission-form-section {
+            background-color: var(--form-red-bg);
+            color: var(--white);
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .admission-form-wrapper {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .admission-form-wrapper h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .form-group-red {
+            margin-bottom: 24px;
+        }
+
+        .form-group-red label {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+
+        .form-control-red {
+            width: 100%;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+            outline: none;
+            background-color: var(--white);
+            color: var(--text-color);
+        }
+
+        /* Radio group styling */
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            padding: 14px 16px;
+            border-radius: 4px;
+            color: var(--text-color);
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .radio-group input[type="radio"] {
+            accent-color: var(--primary-color);
+            width: 18px;
+            height: 18px;
+        }
+
+        textarea.form-control-red {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        /* Send Button */
+        .send-btn {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 14px 35px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .send-btn:hover {
+            background-color: #146c43;
+        }
+
+        .send-btn:active {
+            transform: scale(0.98);
+        }
+
+        #footer-placeholder {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .admission-form-wrapper h2 {
+                font-size: 28px;
+            }
+            .admission-form-section {
+                padding: 40px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="site-wrapper">
+        <!-- HEADER COMPONENT PLACEHOLDER -->
+        <header id="header-placeholder"></header>
+
+        <main>
+            <!-- ADMISSION FORM SECTION -->
+            <section class="admission-form-section">
+                <div class="container">
+                    <div class="admission-form-wrapper">
+                        <h2>ADMISSION OPEN FOR 2026</h2>
+                        
+                        <form action="https://formsubmit.co/reachmenik@yahoo.com" method="POST">
+                            
+                            <!-- FormSubmit Configuration Inputs -->
+                            <input type="hidden" name="_subject" value="New Admission Enquiry - NIMAS 2026">
+                            <input type="hidden" name="_captcha" value="true">
+                            
+                            <div class="form-group-red">
+                                <label for="name">Name*</label>
+                                <input type="text" id="name" name="name" class="form-control-red" required>
+                            </div>
+
+                            <div class="form-group-red">
+                                <label for="email">Email*</label>
+                                <input type="email" id="email" name="email" class="form-control-red" required>
+                            </div>
+
+                            <div class="form-group-red">
+                                <label for="phone">Phone*</label>
+                                <input type="tel" id="phone" name="phone" class="form-control-red" required>
+                            </div>
+
+                            <div class="form-group-red">
+                                <label>Campus*</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="kolkata" name="campus" value="Kolkata" checked>
+                                    <label for="kolkata" style="color: var(--text-color); margin-bottom: 0; font-weight: normal; cursor: pointer;">Kolkata</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group-red">
+                                <label for="course">Choose Preferred Course*</label>
+                                <select id="course" name="course" class="form-control-red" required>
+                                    <option value="B. Optometry">B. Optometry</option>
+                                    <option value="B.Sc. in Cyber Security">B.Sc. in Cyber Security</option>
+                                    <option value="B.Sc Computer Science">B.Sc Computer Science</option>
+                                    <option value="B.Sc in Data Science">B.Sc in Data Science</option>
+                                    <option value="M.Sc. in Clinical Psychology">M.Sc. in Clinical Psychology</option>
+                                    <option value="M.Sc. Dietetics & Nutrition">M.Sc. Dietetics &amp; Nutrition</option>
+                                    <option value="BHHA">B.Sc. in Hospitality &amp; Hotel Administration (BHHA)</option>
+                                    <option value="BBA Hospital Management">Bachelor in Business Administration (Hospital Management)</option>
+                                    <option value="BCA">Bachelor in Computer Applications (BCA)</option>
+                                    <option value="B.Sc. in Medical Lab Technology">B.Sc. in Medical Lab Technology</option>
+                                    <option value="B.Sc in Critical Care Tech">B.Sc. in Medical Instrumentation &amp; Critical Care Technology</option>
+                                    <option value="BBA">Bachelor in Business Administration (BBA)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group-red">
+                                <label for="state">Select Your State*</label>
+                                <input type="text" id="state" name="state" value="West Bengal" class="form-control-red" required>
+                            </div>
+
+                            <div class="form-group-red">
+                                <label for="query">Your Query</label>
+                                <textarea id="query" name="query" class="form-control-red"></textarea>
+                            </div>
+
+                            <button type="submit" class="send-btn">Send</button>
+
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER COMPONENT PLACEHOLDER -->
+        <footer id="footer-placeholder"></footer>
+    </div>
+
+    <!-- JS SCRIPTS FOR REUSABLE COMPONENTS -->
+    <script type="text/javascript">
+        function loadComponent(elementId, fileUrl) {
+            fetch(fileUrl)
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = data;
+                    
+                    // Re-evaluates and executes scripts inside header.html so mobile menus function properly
+                    const scripts = container.querySelectorAll("script");
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement("script");
+                        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                })
+                .catch(error => console.error('Error loading component:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('header-placeholder', 'header.html');
+            loadComponent('footer-placeholder', 'footer.html');
+        });
+    </script>
+</body>
+</html>

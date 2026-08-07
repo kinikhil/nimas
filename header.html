@@ -1,0 +1,265 @@
+<!-- HEADER COMPONENT -->
+<style type="text/css">
+    /* --- HEADER & NAVIGATION STYLES --- */
+    .site-header {
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        position: relative;
+        z-index: 99999;
+    }
+
+    .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 0;
+        position: relative; /* Container reference for menu absolute positioning */
+    }
+
+    .logo img {
+        max-height: 60px;
+        width: auto;
+        display: block;
+    }
+
+    .main-nav {
+        position: relative;
+    }
+
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        gap: 6px;
+    }
+
+    .nav-menu > li {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-menu > li > a {
+        display: inline-block;
+        padding: 10px 18px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #0f2b5c;
+        transition: color 0.2s ease;
+        line-height: 1.2;
+        letter-spacing: -0.2px;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    .nav-menu > li.active > a,
+    .nav-menu > li > a:hover {
+        color: #d8232a;
+    }
+
+    /* Dropdown Sub-menus */
+    .nav-menu ul.sub-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 250px;
+        background-color: #ffffff;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        padding: 12px 0;
+        list-style: none;
+        z-index: 999999;
+    }
+
+    .nav-menu ul.sub-menu li a {
+        display: block;
+        padding: 12px 22px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #444444;
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-menu ul.sub-menu li a:hover {
+        background-color: #f4f6f9;
+        color: #0f2b5c;
+    }
+
+    /* Desktop Hover Trigger */
+    @media (min-width: 993px) {
+        .nav-menu li:hover > ul.sub-menu {
+            display: block !important;
+        }
+    }
+
+    .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #0f2b5c;
+        padding: 5px 10px;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 992px) {
+        .mobile-toggle {
+            display: block;
+        }
+
+        .main-nav {
+            display: none;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            border-top: 1px solid #eeeeee;
+        }
+
+        .main-nav.active {
+            display: block !important;
+        }
+
+        .nav-menu {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+            width: 100%;
+        }
+
+        .nav-menu > li {
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .nav-menu > li > a {
+            padding: 14px 20px;
+        }
+
+        .nav-menu ul.sub-menu {
+            position: relative;
+            top: 0;
+            box-shadow: none;
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 0;
+        }
+
+        .nav-menu ul.sub-menu li a {
+            padding: 12px 35px;
+        }
+
+        /* Show Sub-menu when parent item is open on mobile */
+        .nav-menu li.menu-item-open > ul.sub-menu {
+            display: block !important;
+        }
+    }
+</style>
+
+<header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="nimaslogo.png" alt="NIMAS Logo">
+                </a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">&#9776;</button>
+
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-menu">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="has-submenu">
+                        <a href="#">About Us</a>
+                        <ul class="sub-menu">
+                            <li><a href="know-nimas.html">Know NIMAS</a></li>
+                            <li><a href="office-of-the-chairman.html">Office of the Chairman</a></li>
+                            <li><a href="office-of-the-principal.html">Office of the Principal</a></li>
+							<li><a href="office-of-the-director.html">Office of the Director</a></li>
+                            <li><a href="why-nimas.html">Why NIMAS</a></li>
+                            <li><a href="our-values.html">Our Values</a></li>
+                            <li><a href="ranking-awards.html">Ranking &amp; Awards</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#">Courses</a>
+                        <ul class="sub-menu">
+                            <li><a href="b-optom.html">B. Optometry</a></li>
+                            <li><a href="b-sc-in-cyber-security.html">B.Sc. in Cyber Security</a></li>
+                            <li><a href="bsc-computer-science.html">B.Sc. in Computer Science</a></li>
+                            <li><a href="b-sc-in-data-science.html">B.Sc. in Data Science</a></li>
+                            <li><a href="m-sc-in-clinical-psychology.html">M.Sc. in Clinical Psychology</a></li>
+                            <li><a href="m-sc-dietetics-nutration.html">M.Sc. in Dietetics &amp; Nutrition</a></li>
+                            <li><a href="hospitality-administration-institute-in-kolkata.html">Hotel Management (BHHA)</a></li>
+                            <li><a href="bba-hospital-management.html">Bachelor in Hospital Management</a></li>
+                            <li><a href="top-bca-institute-in-kolkata.html">BCA</a></li>
+                            <li><a href="b-sc-in-medical-lab-technology.html">B.Sc. in Medical Lab Technology</a></li>
+                            <li><a href="bsc-in-medical-instrumentation-and-critical-care-technology.html">B.Sc. in Critical Care Tech</a></li>
+                            <li><a href="bba.html">BBA</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#">Admissions</a>
+                        <ul class="sub-menu">
+                            <li><a href="how-to-apply.html">How to Apply</a></li>
+                            <li><a href="eligibility.html">Eligibility</a></li>
+                            <li><a href="scholarships.html">Scholarships</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#">Placement &amp; Training</a>
+                        <ul class="sub-menu">
+                            <li><a href="our-placements.html">Our Placements</a></li>
+                            <li><a href="placement-support-desk.html">Placement Support Desk</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#">Academic</a>
+                        <ul class="sub-menu">
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="infrastructure.html">Infrastructure</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+    (function initMobileMenu() {
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        if (mobileToggle && mainNav) {
+            mobileToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                mainNav.classList.toggle('active');
+            });
+        }
+
+        // Handle sub-menu toggle on mobile click
+        const subMenuParents = document.querySelectorAll('.nav-menu .has-submenu > a');
+        subMenuParents.forEach(parentAnchor => {
+            parentAnchor.addEventListener('click', function(e) {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    const parentLi = this.parentElement;
+                    parentLi.classList.toggle('menu-item-open');
+                }
+            });
+        });
+    })();
+</script>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>B.Sc. in Medical Lab Technology – NIMAS</title>
+    <style type="text/css">
+        :root {
+            --primary-color: #0e1e3f;
+            --secondary-color: #1c1c1c;
+            --accent-color: #0056b3;
+            --text-color: #333333;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --tab-inactive-bg: linear-gradient(180deg, #4c4c4c 0%, #1e1e1e 50%, #000000 100%);
+            --tab-active-bg: linear-gradient(180deg, #4d6494 0%, #223c72 40%, #182b52 100%);
+            --panel-bg: #182b52;
+            --accent-red: #e74c3c;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; color: var(--text-color); line-height: 1.6; background-color: var(--bg-light); }
+        a { color: inherit; text-decoration: none; }
+        .site-wrapper { width: 100%; margin: 0 auto; }
+        #header-placeholder { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; position: relative; z-index: 99999; }
+        .main-container { max-width: 1200px; margin: 30px auto 40px auto; padding: 0 20px; }
+        .page-banner { background-color: var(--primary-color); color: var(--white); text-align: center; padding: 50px 20px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .page-banner h1 { font-size: 38px; font-weight: 700; }
+        .content-card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .content-card h2 { color: var(--primary-color); margin-bottom: 15px; font-size: 26px; }
+        .tabs-container { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 30px; }
+        .tabs-header { display: flex; background-color: #000; }
+        .tab-btn { flex: 1; padding: 22px 15px; background: var(--tab-inactive-bg); border: none; outline: none; font-size: 16px; font-weight: 700; color: var(--white); cursor: pointer; text-align: center; border-right: 1px solid rgba(255,255,255,0.05); }
+        .tab-btn.active { background: var(--tab-active-bg); }
+        .tab-content-wrapper { background-color: var(--panel-bg); color: var(--white); padding: 40px 30px; min-height: 200px; }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        .tab-panel::before { content: ""; display: block; width: 30px; height: 3px; background-color: var(--accent-red); margin-bottom: 20px; }
+        .tab-panel h3 { color: var(--white); font-size: 20px; margin-bottom: 15px; }
+        .tab-panel ul { margin-left: 20px; margin-top: 10px; margin-bottom: 15px; }
+        .tab-panel li { margin-bottom: 8px; font-size: 15px; }
+        .btn-container { text-align: center; margin: 30px 0; }
+        .btn-apply { display: inline-block; background-color: var(--primary-color); color: var(--white); padding: 15px 40px; font-weight: bold; border-radius: 4px; }
+        #footer-placeholder { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; }
+        @media (max-width: 768px) {
+            .page-banner h1 { font-size: 28px; }
+            .tabs-header { flex-direction: column; }
+            .tab-btn { text-align: left; padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <header id="header-placeholder"></header>
+        <main class="main-container">
+            <section class="page-banner">
+                <h1>B.Sc. in Medical Lab Technology</h1>
+            </section>
+            
+            <div class="content-card">
+                <h2>Course Description</h2>
+                <p>B.Sc. in Medical Laboratory Technology (BMLT) is a branch of science applied to diagnose, treat and prevent diseases using clinical laboratory tests. This branch has two prime career options, including medical laboratory technologists and technicians. B.Sc. in Medical Laboratory Technology involves the study prevention, diagnosis, and treatment of diseases by the utilization of laboratory equipment to perform clinical tests. It is one of the most important parts of the health care system as it plays the role of diagnosis and collection of information required to provide the suitable and best medical facilities to the patient.</p>
+            </div>
+
+            <div class="tabs-container">
+                <div class="tabs-header">
+                    <button class="tab-btn active" onclick="openTab(event, 'tab-overview')">Program Overview</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-eligibility')">Eligibility Criteria</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-curriculum')">Curriculum</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-duration')">Duration</button>
+                </div>
+
+                <div class="tab-content-wrapper">
+                    <div id="tab-overview" class="tab-panel active">
+                        <h3>Program Overview</h3>
+                        <p>Students who graduate in Medical Lab Technology will get ample opportunities for practice in Public Health facilities, Hospitals, Clinics, Nursing homes and Commercial Laboratories as laboratory professionals or experts. Research requires a lot of hard work and thorough knowledge of all medical and clinical aspects as well as great accuracy in the conduction of tests. The students should have an interest in biology, chemistry as well as mechanical and computer knowledge to pursue this career. Most of the job opportunities in the field of Medical Lab Technology depend upon the Technical and Academic skills of the Technologist. After the completion of the Degree, they can join any Medical Laboratory as a certified medical laboratory Technologist and earn experience in their specializations.</p>
+                    </div>
+
+                    <div id="tab-eligibility" class="tab-panel">
+                        <h3>Eligibility Criteria</h3>
+                        <p>Higher Secondary or equivalent examination (CBSE, ISC, A Levels or any other equivalent Board examination) in Science stream with mathematics and/or biology. Students who are due to appear for Class XII final exams/awaiting results may be given provisional admission.</p>
+                    </div>
+
+                    <div id="tab-curriculum" class="tab-panel">
+                        <h3>Curriculum (Course Modules)</h3>
+                        <ul>
+                            <li>Human Anatomy-I</li><li>Human Physiology-I</li><li>Biochemistry-I</li><li>Health Education & Health Communication</li><li>PC Software Lab</li><li>Practical: Human Anatomy-I</li><li>Practical: Human Physiology-I</li><li>Practical: Biochemistry-I</li><li>Human Anatomy-II</li><li>Human Physiology-II</li><li>Biochemistry-II</li><li>Bio Medical Waste Management</li><li>Communication Lab</li><li>Pathology-I</li><li>Clinical Hematology-I</li><li>Microbiology-I</li><li>Immunology & Serology-I</li><li>Histopathology & Histotechniques-I</li><li>Pathology-II</li><li>Clinical Haematology-II</li><li>Microbiology-II</li><li>Immunology & Serology-II</li><li>Histopathology & Histotechniques-II</li><li>Immunohematology & Blood Banking</li><li>Clinical Enzymology & Automation</li><li>Parasitology & Virology</li><li>Diagnostic Cytology</li><li>Principles of Lab Management & Medical Ethics</li><li>Clinical Endocrinology & Toxicology</li><li>Advanced Diagnostic Techniques</li><li>Diagnostic Molecular Biology</li><li>Internship Project</li>
+                        </ul>
+                    </div>
+
+                    <div id="tab-duration" class="tab-panel">
+                        <h3>Duration</h3>
+                        <p>3 Years- Full Time</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <a href="#" class="btn-apply">APPLY NOW</a>
+            </div>
+        </main>
+        <footer id="footer-placeholder"></footer>
+    </div>
+
+    <script type="text/javascript">
+        function openTab(evt, tabName) {
+            var i, tabpanel, tablinks;
+            tabpanel = document.getElementsByClassName("tab-panel");
+            for (i = 0; i < tabpanel.length; i++) { tabpanel[i].classList.remove("active"); }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) { tablinks[i].classList.remove("active"); }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+        function loadComponent(elementId, fileUrl) {
+            fetch(fileUrl)
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = data;
+                    const scripts = container.querySelectorAll("script");
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement("script");
+                        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                })
+                .catch(error => console.error('Error loading component:', error));
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('header-placeholder', 'header.html');
+            loadComponent('footer-placeholder', 'footer.html');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Placement Support Desk – NIMAS</title>
+    
+    <style type="text/css">
+        :root {
+            --primary-color: #0f2b5c;
+            --secondary-color: #1b8a5a;
+            --text-color: #333333;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Page Header Banner */
+        .page-banner {
+            background: linear-gradient(135deg, #0f2b5c 0%, #1a4488 100%);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .page-banner h1 {
+            font-size: 38px;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        /* Main Content Section */
+        .admission-content {
+            padding: 60px 0;
+            background-color: var(--bg-light);
+        }
+
+        /* Support Desk Container & Cards */
+        .support-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .support-card {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 30px;
+            border-left: 5px solid var(--primary-color);
+            transition: transform 0.2s ease;
+        }
+
+        .support-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .support-intro {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 30px;
+            background: #eef2f8;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .support-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .support-card p {
+            margin: 0 0 15px 0;
+            color: #555;
+        }
+
+        .support-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Bottom Apply Now Section */
+        .bottom-apply-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .apply-btn-bottom {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 16px 40px;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .apply-btn-bottom:hover {
+            background-color: #146c43;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .page-banner h1 {
+                font-size: 28px;
+            }
+            .support-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER COMPONENT -->
+    <style type="text/css">
+        /* --- HEADER & NAVIGATION STYLES --- */
+        .site-header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 99999;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 0;
+        }
+
+        .logo img {
+            max-height: 60px;
+            width: auto;
+            display: block;
+        }
+
+        .main-nav {
+            position: relative;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            gap: 6px;
+        }
+
+        .nav-menu > li {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu > li > a {
+            display: inline-block;
+            padding: 10px 18px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #0f2b5c;
+            transition: color 0.2s ease;
+            line-height: 1.2;
+            letter-spacing: -0.2px;
+            text-decoration: none;
+        }
+
+        .nav-menu > li.active > a,
+        .nav-menu > li > a:hover {
+            color: #1b8a5a;
+        }
+
+        /* Dropdown Sub-menus */
+        .nav-menu ul.sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 320px;
+            background-color: #ffffff;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+            padding: 12px 0;
+            list-style: none;
+            z-index: 999999;
+        }
+
+        .nav-menu ul.sub-menu li a {
+            display: block;
+            padding: 12px 22px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #444444;
+            text-decoration: none;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .nav-menu ul.sub-menu li a:hover {
+            background-color: #f4f6f9;
+            color: #0f2b5c;
+        }
+
+        .nav-menu li:hover > ul.sub-menu {
+            display: block !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #0f2b5c;
+        }
+
+        @media (max-width: 992px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #ffffff;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .main-nav.active {
+                display: block;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+            }
+
+            .nav-menu > li {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://i.postimg.cc/FsX6vKn5/nimaslogo.png" alt="NIMAS Logo">
+                    </a>
+                </div>
+
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">&#9776;</button>
+
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="#">About Us</a>
+                            <ul class="sub-menu">
+                                <li><a href="know-nimas.html">Know NIMAS</a></li>
+                                <li><a href="office-of-the-chairman.html">Office of the Chairman</a></li>
+                                <li><a href="office-of-the-principal.html">Office of the Principal</a></li>
+                                <li><a href="why-nimas.html">Why NIMAS</a></li>
+                                <li><a href="our-values.html">Our Values</a></li>
+                                <li><a href="ranking-awards.html">Ranking &amp; Awards</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Courses</a>
+                            <ul class="sub-menu">
+                                <li><a href="b-optom.html">B. Optometry</a></li>
+                                <li><a href="b-sc-in-cyber-security.html">B.Sc. in Cyber Security</a></li>
+                                <li><a href="bsc-computer-science.html">B.Sc Computer Science</a></li>
+                                <li><a href="b-sc-in-data-science.html">B.Sc in Data Science</a></li>
+                                <li><a href="m-sc-in-clinical-psychology.html">M.Sc. in Clinical Psychology</a></li>
+                                <li><a href="m-sc-dietetics-nutration.html">M.Sc. Dietetics &amp; Nutrition</a></li>
+                                <li><a href="hospitality-administration-institute-in-kolkata.html">B.Sc. in Hospitality &amp; Hotel Administration (BHHA)</a></li>
+                                <li><a href="bba-hospital-management.html">Bachelor in Business Administration (Hospital Management)</a></li>
+                                <li><a href="top-bca-institute-in-kolkata.html">Bachelor in Computer Applications (BCA)</a></li>
+                                <li><a href="b-sc-in-medical-lab-technology.html">B.Sc. in Medical Lab Technology</a></li>
+                                <li><a href="bsc-in-medical-instrumentation-and-critical-care-technology.html">B.Sc. in Medical Instrumentation &amp; Critical Care Technology</a></li>
+                                <li><a href="bba.html">Bachelor in Business Administration (BBA)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Admissions</a>
+                            <ul class="sub-menu">
+                                <li><a href="how-to-apply.html">How to Apply</a></li>
+                                <li><a href="eligibility.html">Eligibility</a></li>
+                                <li><a href="scholarships.html">Scholarships</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="#">Placement &amp; Training</a>
+                            <ul class="sub-menu">
+                                <li><a href="our-placements.html">Our Placements</a></li>
+                                <li><a href="placement-support-desk.html">Placement Support Desk</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Academic</a>
+                            <ul class="sub-menu">
+                                <li><a href="courses.html">Courses</a></li>
+                                <li><a href="infrastructure.html">Infrastructure</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Placement Support Desk</h1>
+        </div>
+    </section>
+
+    <!-- MAIN PLACEMENT SUPPORT DESK CONTENT -->
+    <section class="admission-content">
+        <div class="container">
+            
+            <p class="support-intro">The focused activities which help a student to make their career graph as one of the priorities as set by the Placement department at NIMAS.</p>
+
+            <div class="support-grid">
+                
+                <!-- Identify the career path -->
+                <div class="support-card">
+                    <h3>Identify the career path</h3>
+                    <p>All students are assisted with the technical &amp; the psychological thinking to understand the corporate culture as prevalent in India &amp; abroad. During their second year of the course, apart for their regular classes, events, workshops, industry linkage &amp; on-job training are organized to assist them groom up their profile as per the standard requirement.</p>
+                </div>
+
+                <!-- Job & Internship Search Tools -->
+                <div class="support-card">
+                    <h3>Job &amp; Internship Search Tools</h3>
+                    <p>All students are encouraged to explore general and industry specific job and internship resources through the links as assisted by professionals at IIAS. An effective way of creating awareness about the companies among the students in a form of company brochures, pamphlets or other published information.</p>
+                </div>
+
+                <!-- Career Evaluation -->
+                <div class="support-card">
+                    <h3>Career Evaluation</h3>
+                    <p>Career evaluation is an unique model designed to help individuals## Placement Support Desk
+
+The focused activities which help a student to make their career graph as one of the priorities as set by the Placement department at NIMAS.
+
+### Identify the career path
+
+All students are assisted with the technical & the psychological thinking to understand the corporate culture as prevalent in India & abroad. During their second year of the course, apart for their regular classes, events, workshops, industry linkage & on-job training are organized to assist them groom up their profile as## Placement Support Desk
+
+* The placement department at NIMAS prioritizes focused activities to help students build their career paths.
+* Students receive assistance with technical and psychological thinking to understand corporate culture in India and abroad.
+* During the second year, students take part in regular classes, events, workshops, industry linkages, and on-job training to groom their profiles to standard requirements.
+* Students are encouraged to use job and internship search tools and explore resources provided by professionals at IIAS, along with company brochures and published information.
+
+### Career Evaluation
+* Career evaluation helps individuals understand how their personal attributes—such as interests, values, skills, preferences, motivations, aspirations, and strengths—affect their success and satisfaction across different career options and work environments.
+* The dedicated Placement Support Desk provides resume reviews, cover letter writing, practice interviews, networking resources, employer relationships, job and internship opportunities, and industry/profession research.
+* Employers are encouraged to connect with the placement cell for campus recruitment, with recruiter invitations typically sent out in the last semester of the course around December and January each year.
