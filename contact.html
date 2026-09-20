@@ -56,7 +56,7 @@
 
         /* Page Header Banner */
         .page-banner {
-            background: linear-gradient(135deg, rgba(15, 43, 92, 0.85) 0%, rgba(26, 68, 136, 0.85) 100%), url('https://i.postimg.cc/FsX6vKn5/nimaslogo.png') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(15, 43, 92, 0.85) 0%, rgba(26, 68, 136, 0.85) 100%), url('nimaslogo.png') center/cover no-repeat;
             background-color: var(--primary-color);
             color: var(--white);
             padding: 80px 0;
@@ -295,8 +295,7 @@
                             <h3>Phone</h3>
                             <p>We are just a call away.</p>
                             <ul>
-                                <li><a href="tel:+9109874669007">+91-098746 69007</a></li>
-                                <li><a href="tel:+9109874641007">+91-09874641007</a></li>
+                                <li>Admission Number: <a href="tel:+919831552299">98315 52299</a></li>
                             </ul>
                         </div>
 
@@ -306,8 +305,7 @@
                             <h3>Email</h3>
                             <p>Mail us your query, we would call you back.</p>
                             <ul>
-                                <li><a href="mailto:nimas.admission@gmail.com">nimas.admission@gmail.com</a></li>
-                                <li><a href="mailto:info@nimas.in">info@nimas.in</a></li>
+                                <li>Email: <a href="mailto:enquiry@georgecollege.org">enquiry@georgecollege.org</a></li>
                             </ul>
                         </div>
 
@@ -315,8 +313,8 @@
                         <div class="contact-info-box">
                             <div class="icon">📍</div>
                             <h3>Location</h3>
-                            <p>HL NO- 1045/1/A, Barasat Barrackpore Road, Ward No. 4, Kolkata- 700125<br>(Behind Lokenath Mandir)</p>
-                            <a href="https://maps.google.com" target="_blank" rel="noopener">View On Google Map</a>
+                            <p><strong>NIMAS, GEORGE GROUP OF COLLEGES, BARASAT CAMPUS</strong><br>HL NO-1045/1/A, Barasat Barrackpore Road, Ward No. 4, (Behind Lokenath Mandir), Kolkata- 700125, West Bengal</p>
+                            <a href="https://maps.google.com?q=22.73802017580407, 88.46596532668768" target="_blank" rel="noopener">View On Google Map</a>
                         </div>
 
                     </div>
@@ -332,7 +330,7 @@
                     </div>
 
                     <div class="form-card">
-                        <form action="#" method="POST">
+                        <form action="https://formsubmit.co/reachmenik@yahoo.com" method="POST">
                             
                             <div class="form-group">
                                 <label for="name">Name *</label>
@@ -367,14 +365,10 @@
                                 </select>
                             </div>
 
-                            <!-- Simulated Captcha -->
-                            <div class="captcha-container">
-                                <div class="captcha-box">
-                                    <span>Loading...</span>
-                                    <span style="cursor: pointer;" title="Reload Captcha">&#x21bb;</span>
-                                </div>
-                                <input type="text" placeholder="" class="captcha-input" required>
-                            </div>
+                            <input type="hidden" name="_subject" value="Contact Us Enquiry - NIMAS 2026">
+                            <input type="hidden" name="_captcha" value="true">
+                            <input type="hidden" name="_next"
+							 id="nextPage">
 
                             <button type="submit" class="submit-btn">Submit</button>
 
@@ -414,5 +408,9 @@
             loadComponent('footer-placeholder', 'footer.html');
         });
     </script>
+	<script>
+    document.getElementById("nextPage").value =
+    window.location.origin + '/email-sent.html';
+</script>
 </body>
 </html>

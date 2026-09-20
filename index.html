@@ -106,7 +106,7 @@
         .apply-section {
             padding: 50px 40px;
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
-                        url('https://i.postimg.cc/Prfbb19N/nimas-building-blue.jpg') no-repeat center center / cover;
+                        url('nimas-building-blue.jpg') no-repeat center center / cover;
             position: relative;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -191,7 +191,7 @@
         .about-section {
             padding: 50px 0;
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
-                        url('https://i.postimg.cc/Prfbb19N/nimas-building-blue.jpg') no-repeat center center / cover;
+                        url('nimas-building-blue.jpg') no-repeat center center / cover;
             position: relative;
             margin-top: 25px;
             border-top: 4px solid #4ade80;
@@ -380,7 +380,7 @@
         .courses-sidebar-col {
             flex: 0.9;
             background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), 
-                        url('https://i.postimg.cc/Prfbb19N/nimas-building-blue.jpg') no-repeat center center / cover;
+                        url('nimas-building-blue.jpg') no-repeat center center / cover;
             padding: 35px 40px;
             color: #ffffff;
             border-radius: 6px;
@@ -589,7 +589,7 @@
         .contact-us-section {
             padding: 50px 40px;
             background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), 
-                        url('https://i.postimg.cc/Prfbb19N/nimas-building-blue.jpg') no-repeat center center / cover;
+                        url('nimas-building-blue.jpg') no-repeat center center / cover;
             position: relative;
             border-radius: 8px;
             margin: 20px auto 40px auto;
@@ -773,12 +773,12 @@
                 <div class="custom-slider-track" id="sliderTrack">
                     <div class="custom-slide">
                         <a href="admission-form.html">
-                            <img src="https://i.postimg.cc/zf5k4TM0/adminssion-slider1.png" alt="Admission Slider 1">
+                            <img src="adminssion-slider1.png" alt="Admission Slider 1">
                         </a>
                     </div>
                     <div class="custom-slide">
                         <a href="admission-form.html">
-                            <img src="https://i.postimg.cc/fWryFZpD/slider2.png" alt="Admission Slider 2">
+                            <img src="slider2.png" alt="Admission Slider 2">
                         </a>
                     </div>
                 </div>
@@ -794,27 +794,27 @@
                 <div class="custom-slider-track" id="sliderTrack2">
                     <div class="custom-slide">
                         <a href="admission-form.html">
-                            <img src="https://i.postimg.cc/dVBKbj3K/Nimas-Data-Science-REV.jpg" alt="Data Science">
+                            <img src="Nimas-Data-Science-REV.jpg" alt="Data Science">
                         </a>
                     </div>
                     <div class="custom-slide">
                         <a href="admission-form.html">
-                            <img src="https://i.postimg.cc/QxcDb3rn/Nimas-Cyber-REV.jpg" alt="Cyber Security">
+                            <img src="Nimas-Cyber-REV.jpg" alt="Cyber Security">
                         </a>
                     </div>
                     <div class="custom-slide">
                         <a href="admission-form.html">
-                            <img src="https://i.postimg.cc/fknHLp2S/bba-adminssion.jpg" alt="BBA Admission">
+                            <img src="bba-adminssion.jpg" alt="BBA Admission">
                         </a>
                     </div>
                     <div class="custom-slide">
                         <a href="admission-form.html">
-                            <img src="https://i.postimg.cc/mkFXTBSn/Nimas-BBA-REV.jpg" alt="Nimas BBA">
+                            <img src="Nimas-BBA-REV.jpg" alt="Nimas BBA">
                         </a>
                     </div>
                     <div class="custom-slide">
                         <a href="admission-form.html">
-                            <img src="https://i.postimg.cc/gjRCNv12/Nimas-Optometry-REV.jpg" alt="Nimas Optometry">
+                            <img src="Nimas-Optometry-REV.jpg" alt="Nimas Optometry">
                         </a>
                     </div>
                 </div>
@@ -827,7 +827,7 @@
                 <section class="apply-section">
                     <div class="apply-grid">
                         <div class="apply-image-col">
-                            <img src="https://i.postimg.cc/B6M9jxR9/apply-now.png" alt="Apply Now">
+                            <img src="apply-now.png" alt="Apply Now">
                         </div>
                         <div class="apply-content-col">
                             <h2>Apply for Admission</h2>
@@ -958,7 +958,7 @@
                 </ul>
 
                 <div class="awards-banner">
-                    <img src="https://i.postimg.cc/c131Djq2/allawards.png" alt="NIMAS Awards and Certificates">
+                    <img src="allawards.png" alt="NIMAS Awards and Certificates">
                 </div>
             </div>
         </section>
@@ -996,13 +996,18 @@
                     </div>
                     <div class="contact-us-form-col">
                         <h2>Contact Us</h2>
-                        <form class="contact-form" action="#" method="POST">
+                        <form action="https://formsubmit.co/reachmenik@yahoo.com" method="POST" class="contact-form">
                             <input type="text" name="name" placeholder="Name" required>
                             <input type="text" name="course" placeholder="Course" required>
                             <input type="email" name="email" placeholder="Email" required>
                             <input type="tel" name="phone" placeholder="Phone" required>
-                            <button type="submit" class="contact-submit-btn">Submit</button>
-                        </form>
+                            <input type="hidden" name="_subject" value="New Admission Short Enquiry - NIMAS 2026">
+                            <input type="hidden" name="_captcha" value="true">
+                            <input type="hidden" name="_next"
+							 id="nextPage">
+							 <button type="submit" class="contact-submit-btn">Submit</button>
+							
+						</form>
                     </div>
                 </div>
             </section>
@@ -1012,7 +1017,7 @@
         <section class="testimonials-section">
             <div class="container">
                 <div class="testimonials-banner">
-                    <img src="https://i.postimg.cc/Y08t15Vm/testimonials.png" alt="NIMAS Student Testimonials">
+                    <img src="testimonials.png" alt="NIMAS Student Testimonials">
                 </div>
             </div>
         </section>
@@ -1135,5 +1140,9 @@
             }
         });
     </script>
+	<script>
+    document.getElementById("nextPage").value =
+    window.location.origin + '/email-sent.html';
+</script>
 </body>
 </html>

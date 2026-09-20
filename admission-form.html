@@ -163,6 +163,7 @@
             }
         }
     </style>
+	
 </head>
 <body>
 
@@ -182,7 +183,8 @@
                             <!-- FormSubmit Configuration Inputs -->
                             <input type="hidden" name="_subject" value="New Admission Enquiry - NIMAS 2026">
                             <input type="hidden" name="_captcha" value="true">
-                            
+                            <input type="hidden" name="_next"
+							 id="nextPage">
                             <div class="form-group-red">
                                 <label for="name">Name*</label>
                                 <input type="text" id="name" name="name" class="form-control-red" required>
@@ -272,5 +274,9 @@
             loadComponent('footer-placeholder', 'footer.html');
         });
     </script>
+	<script>
+    document.getElementById("nextPage").value =
+    window.location.origin + '/email-sent.html';
+</script>
 </body>
 </html>
